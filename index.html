@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>HTML & JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div class="head_container">
+      <h2 class="bulb_head">Switch ON/OFF the Bulb</h2>
+    </div>
+    <div class="body">
+      <script>
+        function light(num) {
+          var pic;
+          if (num === 0) {
+            pic =
+              "https://cdn.pixabay.com/photo/2013/07/13/13/34/bulb-161134_640.png";
+          } else {
+            pic =
+              "https://cdn.pixabay.com/photo/2012/04/18/13/13/bulb-36991_1280.png";
+          }
+          document.getElementById("bulb").src = pic;
+        }
+      </script>
+      <div class="main_body">
+        <img
+          src="https://cdn.pixabay.com/photo/2012/04/18/13/13/bulb-36991_1280.png"
+          id="bulb"
+          alt=""
+        />
+
+        <div class="buttons_container">
+          <button type="button" onclick="light(0)">ON</button>
+          <button type="button" onclick="light(1)">OFF</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
